@@ -1,6 +1,3 @@
-import numpy as np
-
-
 def flipper(obj:str)->str:
     """toma un string y el objeto del primer indice lo deja en el último, así sucesivamente
     ej : flipper("juan")="nauj"
@@ -14,14 +11,14 @@ def flipper(obj:str)->str:
 
     return flipped
 
-def ponderador(string:str,ponderadora:list[int])->int:
+def ponderador(texto:str,ponderadora:list[int])->int:
     """Recibe un string casteable a int, para luego multiplicar cada numero por una lista ponderadora
     """
     suma=0
     i=0
     j=0
-    while i < len(string):
-        digito=int(string[i])
+    while i < len(texto):
+        digito=int(texto[i])
         if j>=len(ponderadora):
             j=0
         suma+=(digito*ponderadora[j])
